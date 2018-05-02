@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 5</title>
+  </head>
+  <body>
+    <div class="conteneur">
+      <img src="images/image1.jpg" id="image1" />
+      <img src="images/image2.jpg" id="image2" />
+      <img src="images/image3.jpg" id="image3" />
+      <img src="images/image4.jpg" id="image4" />
+      <img src="images/image5.jpg" id="image5" />
+    </div>
+  </body>
+
+
+  <script>
+
+    /*function hoverMouse(){
+      var imgAttr = this.getAttribute("src");
+      var imgId = this.getAttribute("id");
+      var reg = /\/\./;
+      imgSplit = imgAttr.split(/\//);
+      imgSplitDos = imgSplit[1].split(".");
+    //alert(imgSplitDos[0]);
+      this.setAttribute("src","images/"+imgSplitDos[0]+"_2.jpg");
+      //alert(imgId);
+    }*/
+    function hoverMouse(){
+      var imgId = this.getAttribute("id");
+      this.setAttribute("src","images/"+imgId+"_2.jpg");
+    }
+
+    var hoveImg = document.getElementsByTagName("img");
+    for (var i = 0; i < hoveImg.length; i++) {
+      hoveImg[i].addEventListener("mouseover", hoverMouse)
+    }
+  </script>
+</html>

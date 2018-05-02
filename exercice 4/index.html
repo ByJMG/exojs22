@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="Doe" id="nom" />
+    <label for="prenom">Votre prenom  : </label><input type="text" name="prenom" value="John" id="prenom" />
+    <label for="ville">Votre ville  : </label><input type="text" name="ville" value="New York" id="ville" />
+    <button type="button" name="button">RAZ</button>
+  </form>
+</body>
+
+<script>
+
+  function razInput(){
+    var iinput = document.getElementsByTagName("input");
+    for (var i = 0; i < iinput.length; i++) {
+      iinput[i].value="";
+    }
+
+  }
+  var zar = document.getElementsByTagName("button");
+  for (var i = 0; i < zar.length; i++) {
+    zar[i].addEventListener("click", razInput);
+  }
+</script>
+</html>

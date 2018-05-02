@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 6</title>
+  </head>
+  <body>
+      <img src="images/image1.jpg" id="image1" />
+      <img src="images/image2.jpg" id="image2" />
+      <img src="images/image3.jpg" id="image3" />
+      <img src="images/image4.jpg" id="image4" />
+      <img src="images/image5.jpg" id="image5" />
+  </body>
+</html>
+
+
+<script>
+function hoverMouse(){
+  var imgId = this.getAttribute("id");
+  this.setAttribute("src","images/"+imgId+"_2.jpg");
+}
+
+var hoveImg = document.getElementsByTagName("img");
+for (var i = 0; i < hoveImg.length; i++) {
+  hoveImg[i].addEventListener("mouseover", hoverMouse)
+}
+</script>
